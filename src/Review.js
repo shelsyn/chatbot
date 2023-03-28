@@ -17,15 +17,15 @@ const Review = (props)  => {
         <table>
           <tbody>
             <tr>
-              <td>Name</td>
+              <td>Nombre</td>
               <td>{name.value}</td>
             </tr>
             <tr>
-              <td>Gender</td>
+              <td>Solicitud</td>
               <td>{gender.value}</td>
             </tr>
             <tr>
-              <td>Age</td>
+              <td>Edad</td>
               <td>{age.value}</td>
             </tr>
           </tbody>

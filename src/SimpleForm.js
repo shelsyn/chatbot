@@ -9,7 +9,7 @@ class SimpleForm extends Component {
           steps={[
             {
               id: '1',
-              message: 'What is your name?',
+              message: 'Cual es tu nombre?',
               trigger: 'name',
             },
             {
@@ -19,19 +19,19 @@ class SimpleForm extends Component {
             },
             {
               id: '3',
-              message: 'Hi {previousValue}! What is your gender?',
+              message: 'Hola {previousValue}! Cuentanos en que podemos ayudarte?',
               trigger: 'gender',
             },
             {
               id: 'gender',
               options: [
-                { value: 'male', label: 'Male', trigger: '5' },
-                { value: 'female', label: 'Female', trigger: '5' },
+                { value: 'cancelar', label: 'cancelar cita', trigger: '5' },
+                { value: 'Agregar', label: 'agregar cita', trigger: '5' },
               ],
             },
             {
               id: '5',
-              message: 'How old are you?',
+              message: 'Cuentanos que edad tienes?',
               trigger: 'age',
             },
             {
@@ -52,7 +52,7 @@ class SimpleForm extends Component {
             },
             {
               id: '7',
-              message: 'Great! Check out your summary',
+              message: 'Estamos haciendo el proceso',
               trigger: 'review',
             },
             {
@@ -63,32 +63,32 @@ class SimpleForm extends Component {
             },
             {
               id: 'update',
-              message: 'Would you like to update some field?',
+              message: 'Esta seguro en continuar?',
               trigger: 'update-question',
             },
             {
               id: 'update-question',
               options: [
-                { value: 'yes', label: 'Yes', trigger: 'update-yes' },
-                { value: 'no', label: 'No', trigger: 'end-message' },
+                { value: 'no', label: 'no', trigger: 'update-yes' },
+                { value: 'yes', label: 'Si', trigger: 'end-message' },
               ],
             },
             {
               id: 'update-yes',
-              message: 'What field would you like to update?',
+              message: 'Tienes que arreglar algo?',
               trigger: 'update-fields',
             },
             {
               id: 'update-fields',
               options: [
-                { value: 'name', label: 'Name', trigger: 'update-name' },
-                { value: 'gender', label: 'Gender', trigger: 'update-gender' },
-                { value: 'age', label: 'Age', trigger: 'update-age' },
+                { value: 'nombre', label: 'Name', trigger: 'update-name' },
+                { value: 'cita', label: 'Gender', trigger: 'update-gender' },
+                { value: 'edad', label: 'Age', trigger: 'update-age' },
               ],
             },
             {
               id: 'update-name',
-              update: 'name',
+              update: 'nombre',
               trigger: '7',
             },
             {
@@ -98,12 +98,12 @@ class SimpleForm extends Component {
             },
             {
               id: 'update-age',
-              update: 'age',
+              update: 'Años',
               trigger: '7',
             },
             {
               id: 'end-message',
-              message: 'Thanks! Your data was submitted successfully!',
+              message: 'Gracias por la informacion , al correo llegara tu solicitud',
               end: true,
             },
           ]}
